@@ -1,5 +1,20 @@
 const makeChange = (c) => {
   // your name here
+	c = Number(c);
+
+  const q = Math.floor(c / 25);
+  c %= 25;
+
+  const d = Math.floor(c / 10);
+  c %= 10;
+
+  const n = Math.floor(c / 5);
+  c %= 5;
+
+  const p = c; // whatever remains are pennies
+
+  return { q, d, n, p };
+
 };
 
 // Do not the change the code below
